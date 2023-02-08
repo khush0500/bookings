@@ -2,6 +2,7 @@ package renders
 
 import (
 	"bytes"
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -36,6 +37,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData)
 		}
 
 	}
+	fmt.Println(tc)
 
 	//get req'ed temp from cache
 	t, ok := tc[tmpl]
