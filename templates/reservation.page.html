@@ -1,0 +1,32 @@
+{{template "base" .}}
+{{define "content"}}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5">Search fro Availablity</h1>
+
+            <form action="/make-reservation" method="get">
+
+                <div class="mb-3">
+                  <label for="start_date" class="form-label">Stating Date</label>
+                  <input type="text" class="form-control" id="start_date" name="start_date" aria-describedby="StartDateHelp">
+                  <div id="emailHelp" class="form-text">Enter your stating date in the form of YYYY-MM-DD</div>
+                </div>
+
+
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+              </form>
+
+        </div>
+    </div>
+</div>
+
+{{end}}
